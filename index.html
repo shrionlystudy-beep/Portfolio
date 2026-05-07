@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shrinivas B | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f5f7fb;
+      color:#1f2937;
+      overflow-x:hidden;
+    }
+
+    :root{
+      --primary:#1e3a5f;
+      --secondary:#334155;
+      --light:#f5f7fb;
+      --dark:#111827;
+      --card:#ffffff;
+    }
+
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(245,247,251,0.95);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+      box-shadow:0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--dark);
+      margin-left:24px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:var(--primary);
+    }
+
+    section{
+      min-height:100vh;
+      padding:120px 10% 80px;
+    }
+
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:50px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      line-height:1.2;
+      color:var(--dark);
+    }
+
+    .hero-text span{
+      color:var(--primary);
+    }
+
+    .hero-text h3{
+      margin:18px 0;
+      color:var(--secondary);
+      font-weight:500;
+      font-size:24px;
+    }
+
+    .hero-text p{
+      line-height:1.9;
+      max-width:650px;
+      color:#4b5563;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:var(--primary);
+      color:#ffffff;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s ease;
+      font-weight:500;
+    }
+
+    .btn:visited{
+      color:#ffffff;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#152c48;
+    }
+
+    .hero-card{
+      flex:0.8;
+      background:var(--card);
+      padding:35px;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .hero-card h2{
+      color:var(--primary);
+      margin-bottom:15px;
+    }
+
+    .hero-card p{
+      margin:10px 0;
+      color:#4b5563;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      color:var(--primary);
+      margin-bottom:40px;
+    }
+
+    .about-box,
+    .education-box,
+    .contact-box{
+      background:var(--card);
+      padding:40px;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+      line-height:2;
+    }
+
+    .skills-grid,
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-card,
+    .project-card{
+      background:var(--card);
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.06);
+      transition:0.3s ease;
+    }
+
+    .skill-card:hover,
+    .project-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .skill-card h3,
+    .project-card h3{
+      color:var(--primary);
+      margin-bottom:15px;
+    }
+
+    .skill-card p,
+    .project-card p{
+      color:#4b5563;
+      line-height:1.8;
+    }
+
+    .contact-box a{
+      color:var(--primary);
+      text-decoration:none;
+      word-break:break-word;
+    }
+
+    .contact-box .btn{
+      color:#ffffff !important;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#e5e7eb;
+      color:#374151;
+      font-weight:500;
+    }
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      nav{
+        text-align:center;
+      }
+
+      nav a{
+        margin:0 10px;
+      }
+
+      .hero{
+        flex-direction:column;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">Shrinivas B</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h1>Hello, I'm <span>Shrinivas B</span></h1>
+
+      <h3>AI & Data Science Student | Curious Thinker</h3>
+
+      <p>
+        I am a passionate engineering student interested in technology,
+        analytical thinking, and continuous learning. I enjoy exploring
+        concepts related to applied mathematics, philosophy, AI tools,
+        and modern problem-solving approaches. My goal is to build strong
+        technical skills while maintaining a creative and logical mindset.
+      </p>
+
+      <a href="#projects" class="btn">Explore My Work</a>
+
+    </div>
+
+    <div class="hero-card">
+
+      <h2>Quick Info</h2>
+
+      <p><strong>College:</strong> MIT Academy of Engineering</p>
+      <p><strong>Branch:</strong> AI & Data Science</p>
+      <p><strong>Year:</strong> FY Engineering</p>
+      <p><strong>PRN:</strong> 202501120143</p>
+      <p><strong>Location:</strong> Pune, India</p>
+      <p><strong>Interests:</strong> Hiking, Cycling, Exploring, Applied Mathematics, Philosophy</p>
+
+    </div>
+
+  </section>
+
+  <section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-box">
+
+      <p>
+        I enjoy understanding how technology and logical thinking can be
+        used to solve real-world problems. Along with academics, I am deeply
+        interested in exploration, philosophy, and analytical reasoning.
+        I believe in staying curious, disciplined, and open-minded while
+        continuously improving my technical and personal abilities.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>Python, C, HTML, SQL</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Analytical Skills</h3>
+        <p>Applied Mathematics, Logical Thinking, Problem Solving</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Creative Interests</h3>
+        <p>Exploration, Philosophy, Research Mindset, Curiosity</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+
+        <h3>Accident Alert System</h3>
+
+        <p>
+          A smart safety-based project designed to improve emergency response
+          during road accidents using sensors and alert mechanisms for faster
+          communication and assistance.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Data Analysis Concepts</h3>
+
+        <p>
+          Worked on beginner-level analytical and logical problem-solving
+          concepts using programming and structured data approaches.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-box">
+
+      <p><strong>College:</strong> MIT Academy of Engineering</p>
+      <p><strong>Course:</strong> Artificial Intelligence & Data Science</p>
+      <p><strong>Current Year:</strong> First Year Engineering</p>
+      <p><strong>Location:</strong> Pune, Maharashtra, India</p>
+
+    </div>
+
+  </section>
+
+  <section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-box">
+
+      <p>
+        <strong>Email:</strong>
+
+        <a href="mailto:shrionlystudy@gmail.com">
+          shrionlystudy@gmail.com
+        </a>
+      </p>
+
+      <p><strong>Instagram:</strong> Same as contact number</p>
+
+      <br>
+
+      <a href="mailto:shrionlystudy@gmail.com" class="btn">
+        Send Message
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Shrinivas B | Portfolio Website
+  </footer>
+
+</body>
+</html>
+
+ 
